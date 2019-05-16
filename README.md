@@ -93,3 +93,13 @@ Recipe app using Django REST Framework, TDD, Travis-CI, and Docker.
 * Add path to token on urls.py
 * Run tests again (should pass and it should be possible to create users and auth tokens)
 * Push changes
+
+### Manage User endpoints
+* Add tests for /me endpoints
+* Add ManagerUserView on views.py
+* Add update method on UserSerializer
+* Add profile urls to urls.py
+
+### Tags model
+* Create app recipes
+* 
