@@ -122,3 +122,14 @@ Recipe app using Django REST Framework, TDD, Travis-CI, and Docker.
 * Implement perform_create method to attach the user to the payload
 * Run tests (should pass)
 * Push changes
+
+### Create Ingredient model
+* Add test to core.tests.test_models
+* Add Ingredient model class to core.models
+* Run migrations
+* Run tests (should pass)
+
+### Ingredients API endpoints
+* Add public and private tests to recipes.tests.test_ingredients_api
+* Add IngredientSerializer
+* Add IngredientViewSet
