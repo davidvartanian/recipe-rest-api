@@ -1,4 +1,4 @@
-# Recipe REST API
+# Recipe REST API [![Build Status](https://travis-ci.org/davidvartanian/recipe-rest-api.svg?branch=master)](https://travis-ci.org/davidvartanian/recipe-rest-api)
 Recipe app using Django REST Framework, TDD, Travis-CI, and Docker.
 
 ## Log
@@ -52,3 +52,18 @@ Recipe app using Django REST Framework, TDD, Travis-CI, and Docker.
 * Add fieldsets configuration to UserAdmin
 * Add test for creating users
 * Add configuration for add_fieldsets to support the custom User class
+* Push changes
+* Embed build status image from Travis-CI and paste it next to the title on the README file
+
+### Setup PostgreSQL
+* Add db configuration on docker-compose.yml file
+* Uodate requirements.txt file: psycopg2
+* Update Dockerfile to add package postgresql-client
+* Update settings.py to use postgres db
+
+### Make Django wait for DB to be ready
+* Create test_commands.py file
+* Add test for wait_for_db command
+* Implement wait_for_db command on core.management.commands
+* Update command on docker-compose.yml
+* Push changes
