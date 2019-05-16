@@ -43,3 +43,12 @@ Recipe app using Django REST Framework, TDD, Travis-CI, and Docker.
 ### Create super user
 * Add test for super user creation
 * Implement create_superuser function on UserManager class
+
+### Setup Admin
+* Create test_admin.py file
+  * Add test for user list on admin
+  * Run tests (should pass)
+* Add test for updating user
+* Add fieldsets configuration to UserAdmin
+* Add test for creating users
+* Add configuration for add_fieldsets to support the custom User class
