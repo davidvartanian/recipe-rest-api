@@ -115,3 +115,10 @@ Recipe app using Django REST Framework, TDD, Travis-CI, and Docker.
 * Add urls to main urls.py file
 * Run tests (should pass)
 * Push changes
+
+### Create Tags
+* Add tests for adding tags
+* Add CreateModelMixin to TagViewSet class
+* Implement perform_create method to attach the user to the payload
+* Run tests (should pass)
+* Push changes
