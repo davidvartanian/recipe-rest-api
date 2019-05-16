@@ -67,3 +67,29 @@ Recipe app using Django REST Framework, TDD, Travis-CI, and Docker.
 * Implement wait_for_db command on core.management.commands
 * Update command on docker-compose.yml
 * Push changes
+* Create superuser
+* Run docker-compose up
+* Browse http://localhost:8000/admin and signin with your superuser credentials (admin app should work)
+
+### Users App
+* Create app: $`docker-compose run --rm app sh -c "python manage.py startapp users"`
+* Cleanup files/directories: migrations, models.py, admin.py, tests.py
+* Enable rest_framework, rest_framework.authtoken, and users apps on INSTALLED_APPS.
+* Create test_user_api.py file
+* Add test for successful user creation
+* Add test for failed user creation (duplicate email)
+* Run tests (it should fail)
+
+### Create User API endpoints
+* Create serializers.py file and create UserSerializer
+* Add User view on views.py
+* Create file urls.py on users app and add the create url
+* Add a new entry on project's urls.py file
+
+### Auth Token API endpoints
+* Add tests on tests.py file
+* Add AuthTokenSerializer to serializers.py
+* Add CreateTokenView on views.py
+* Add path to token on urls.py
+* Run tests again (should pass and it should be possible to create users and auth tokens)
+* Push changes
