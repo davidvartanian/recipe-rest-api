@@ -102,4 +102,16 @@ Recipe app using Django REST Framework, TDD, Travis-CI, and Docker.
 
 ### Tags model
 * Create app recipes
-* 
+* Cleanup directories and files
+* Add helper function to create users on core.test_models
+* Add new Tag model on core.models
+* Run migrations
+
+### Tags API endpoints
+* Create tests on recipes.tests package
+* Implement TagSerializer
+* Implement ViewSet
+* Create recipes.urls and create DefaultRouter based on the ViewSet
+* Add urls to main urls.py file
+* Run tests (should pass)
+* Push changes
