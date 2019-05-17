@@ -142,3 +142,6 @@ Recipe app using Django REST Framework, TDD, Travis-CI, and Docker.
 * Add mixins.CreateModelMixin to IngredientViewSet and implement the perform_create method to attach the current user
 * Run tests (should pass)
 * Push changes
+
+### Refactor ingredient and tag ViewSet classes
+* Create a new base class BaseRecipeAttrViewSet and implement the common logic there
