@@ -1,6 +1,14 @@
 # Recipe REST API [![Build Status](https://travis-ci.org/davidvartanian/recipe-rest-api.svg?branch=master)](https://travis-ci.org/davidvartanian/recipe-rest-api)
 Recipe app using Django REST Framework, TDD, Travis-CI, and Docker.
 
+## Covered on this project
+* Fully functional REST API using Django
+* Docker setup (nothing runs on the local machine)
+* Travis-CI integration
+* Default and custom REST endpoints
+* Image uploads
+* Test Driven Development (TDD)
+
 ## Log
 
 ### Project Setup
@@ -200,5 +208,12 @@ Recipe app using Django REST Framework, TDD, Travis-CI, and Docker.
 ### Filter recipes by tags
 * Add tests to filter recipes by tags on recipes.tests.test_recipe_api
 * Implement filters on RecipeViewSet queryset
+* Tests should pass
+* Push changes
+
+### Filter tags to display only the ones assigned to recipes
+* Add tests to display only assigned tags and filtered tags are unique
+* Add tests to display only assigned ingredients and filtered ingredients are unique
+* Implement filtered tags by assigned_only by updating the BaseRecipeAttrViewSet's get_queryset method
 * Tests should pass
 * Push changes
