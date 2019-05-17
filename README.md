@@ -145,3 +145,9 @@ Recipe app using Django REST Framework, TDD, Travis-CI, and Docker.
 
 ### Refactor ingredient and tag ViewSet classes
 * Create a new base class BaseRecipeAttrViewSet and implement the common logic there
+
+### Recipe model
+* Add string representation test for Recipe on core.tests.test_models
+* Implement Ingredient model on core.models
+* Tests should pass
+* Push changes
