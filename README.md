@@ -133,3 +133,12 @@ Recipe app using Django REST Framework, TDD, Travis-CI, and Docker.
 * Add public and private tests to recipes.tests.test_ingredients_api
 * Add IngredientSerializer
 * Add IngredientViewSet
+* Add router configuration on recipes.urls
+* Run tests (should pass)
+* Push changes
+
+### Ingredients creation
+* Add tests to create ingredients
+* Add mixins.CreateModelMixin to IngredientViewSet and implement the perform_create method to attach the current user
+* Run tests (should pass)
+* Push changes
