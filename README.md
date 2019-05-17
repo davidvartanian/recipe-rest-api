@@ -189,3 +189,10 @@ Recipe app using Django REST Framework, TDD, Travis-CI, and Docker.
 * Add tests for unique filenames
 * Create function to generate image filenames on core.models
 * Update Recipe model with the image field
+
+### Image upload API
+* Add tests to upload images using tempfile and PIL.Image
+* Implement RecipeImageSerializer
+* Implement custom action upload_image on recipes.views.RecipeViewSet and update get_serializer_class method
+* Tests should pass
+* Push changes
