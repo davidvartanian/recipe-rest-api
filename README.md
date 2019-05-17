@@ -178,3 +178,14 @@ Recipe app using Django REST Framework, TDD, Travis-CI, and Docker.
 * Add tests for updating recipes using PATCH and PUT
 * Tests should pass right away since update works out of the box in Django
 * Push changes
+
+### Setup Pillow
+* Update requirements.txt file and add Pillow package
+* Update Dockerfile to support Pillow installation (dev packages, static directory, media directory, permissions)
+* Update settings.py to setup static files (STATIC_URL, STATIC_ROOT, MEDIA_URL, MEDIA_ROOT)
+* Add media and static URLs to project's urls.py
+
+### Update Recipe model
+* Add tests for unique filenames
+* Create function to generate image filenames on core.models
+* Update Recipe model with the image field
