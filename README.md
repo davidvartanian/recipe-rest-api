@@ -159,3 +159,9 @@ Recipe app using Django REST Framework, TDD, Travis-CI, and Docker.
 * Add router configuration on recipes.urls
 * Tests should pass
 * Push changes
+
+### Recipe detail API
+* Add helper functions to get sample model Tag and Ingredient objects
+* Add tests for recipe detail view
+* Implement RecipeDetailSerializer
+* Implement get_serializer_class on recipes.views.RecipeViewSet
