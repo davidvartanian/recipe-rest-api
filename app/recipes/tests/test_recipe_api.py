@@ -194,6 +194,45 @@ class PrivateRecipeApiTests(TestCase):
         tags = recipe.tags.all()
         self.assertEqual(len(tags), 0)
 
+    def test_filter_recipes_by_tags(self):
+        """Test retrieving filtered list of recipes by tag"""
+        recipe1 = sample_recipe(user=self.user, title='Pastel de papas')
+        recipe2 = sample_recipe(user=self.user, title='Spaghetti bolognese')
+        recipe3 = sample_recipe(user=self.user, title='Ensalada sin carne')
+        tag1 = sample_tag(user=self.user, name='tasty')
+        tag2 = sample_tag(user=self.user, name='amazing')
+        recipe1.tags.add(tag1)
+        recipe2.tags.add(tag2)
+        res = self.client.get(RECIPES_URL, {'tags': f'{tag1.id},{tag2.id}'})
+        serializer1 = RecipeSerializer(recipe1)
+        serializer2 = RecipeSerializer(recipe2)
+        serializer3 = RecipeSerializer(recipe3)
+        self.assertIn(serializer1.data, res.data)
+        self.assertIn(serializer2.data, res.data)
+        self.assertNotIn(serializer3.data, res.data)
+
+    def test_filter_recipes_by_ingredients(self):
+        """Test retrieving filtered list of recipes by ingredient"""
+        recipe1 = sample_recipe(user=self.user, title='Hungarian Goulash')
+        recipe2 = sample_recipe(user=self.user, title='Spaghetti bolognese')
+        recipe3 = sample_recipe(user=self.user, title='Ensalada sin carne')
+        ingredient1 = sample_ingredient(user=self.user, name='Goulash')
+        ingredient2 = sample_ingredient(user=self.user, name='Minced beef')
+        recipe1.ingredients.add(ingredient1)
+        recipe2.ingredients.add(ingredient2)
+        res = self.client.get(
+            RECIPES_URL,
+            {'ingredients': f'{ingredient1.id},{ingredient2.id}'}
+        )
+
+        serializer1 = RecipeSerializer(recipe1)
+        serializer2 = RecipeSerializer(recipe2)
+        serializer3 = RecipeSerializer(recipe3)
+
+        self.assertIn(serializer1.data, res.data)
+        self.assertIn(serializer2.data, res.data)
+        self.assertNotIn(serializer3.data, res.data)
+
 
 class RecipeImageUploadTests(TestCase):
     """Tests for recipe image upload"""

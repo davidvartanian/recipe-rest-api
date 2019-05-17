@@ -196,3 +196,9 @@ Recipe app using Django REST Framework, TDD, Travis-CI, and Docker.
 * Implement custom action upload_image on recipes.views.RecipeViewSet and update get_serializer_class method
 * Tests should pass
 * Push changes
+
+### Filter recipes by tags
+* Add tests to filter recipes by tags on recipes.tests.test_recipe_api
+* Implement filters on RecipeViewSet queryset
+* Tests should pass
+* Push changes
